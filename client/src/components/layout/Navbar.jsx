@@ -41,7 +41,7 @@ const Navbar = () => {
       </div>
 
       {/* Underline - 75% Width, Centered */}
-      <div className="w-[95%] h-[1px] bg-black mx-auto"></div>
+      <div className="w-full h-px bg-black mx-auto"></div>
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
