@@ -3,6 +3,7 @@ import Navbar from './components/layout/Navbar';
 import HeroSction from "./components/section/HeroSction";
 import Service from "./components/pages/Service";
 import Gallery  from "./components/pages/Gallery";
+import About from "./components/pages/About";
 
 import React from 'react'
 
@@ -13,6 +14,7 @@ const App = () => {
       <HeroSction />
       <Service />
       <Gallery />
+      <About />
     </div>
   )
 }
