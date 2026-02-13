@@ -5,7 +5,7 @@ const HeroSction = () => {
     "https://images.unsplash.com/photo-1541698444083-023c97d3f4b6?auto=format&fit=crop&w=1800&q=80";
 
   return (
-    <section
+    <section id="home"
       className="w-full h-[70vh] md:h-[80vh] bg-cover bg-center relative"
       style={{ backgroundImage: `url(${bgUrl})` }}
     >

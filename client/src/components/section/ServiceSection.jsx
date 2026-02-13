@@ -76,7 +76,7 @@ const ServiceSection = () => {
   const visibleServices = services.slice(0, visibleCount);
 
   return (
-    <section className="w-full bg-[#F8F0E3] py-16 px-6">
+    <section id="services" className="w-full bg-[#F8F0E3] py-16 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">

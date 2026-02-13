@@ -19,9 +19,9 @@ const Navbar = () => {
 
         {/* Desktop Links - Left */}
         <ul className="hidden md:flex flex-1 items-center justify-center gap-8 text-gray-700 font-medium">
-          <li className="hover:text-[#B8860B] cursor-pointer">Home</li>
-          <li className="hover:text-[#B8860B] cursor-pointer">Services</li>
-          <li className="hover:text-[#B8860B] cursor-pointer">Gallery</li>
+          <li className="hover:text-[#B8860B] cursor-pointer"> <a href="#home">Home</a></li>
+          <li className="hover:text-[#B8860B] cursor-pointer"><a href="#services">Services</a></li>
+          <li className="hover:text-[#B8860B] cursor-pointer"><a href="#gallery">Gallery</a></li>
         </ul>
 
         {/* Logo - Center */}
@@ -31,9 +31,9 @@ const Navbar = () => {
 
         {/* Desktop Links - Right */}
         <ul className="hidden md:flex flex-1 items-center justify-center gap-8 text-gray-700 font-medium">
-          <li className="hover:text-[#B8860B] cursor-pointer">Packages</li>
-          <li className="hover:text-[#B8860B] cursor-pointer">About</li>
-          <li className="hover:text-[#B8860B] cursor-pointer">Book Now</li>
+          <li className="hover:text-[#B8860B] cursor-pointer"><a href="#packages">Packages</a></li>
+          <li className="hover:text-[#B8860B] cursor-pointer"><a href="#about">About</a></li>
+          <li className="hover:text-[#B8860B] cursor-pointer"><a href="#booknow">Book Now</a></li>
         </ul>
 
         {/* Mobile Ghost Div for Centering (Optional) - Keeps logo centered on mobile if needed */}

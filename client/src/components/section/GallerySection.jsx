@@ -4,7 +4,7 @@ import BgImg from "../../assets/Gallery/premium_photo-1674235766088-80d8410f9523
 const GallerySection = () => {
   return (
     <div>
-      <section>
+      <section id="gallery">
         <div
           className="w-full py-10 px-6 bg-cover bg-center h-screen"
           style={{ backgroundImage: `url(${BgImg})` }}

@@ -5,7 +5,7 @@ import aboutImg3 from"../../assets/About/about-3.gif";
 import aboutImg4 from"../../assets/About/about-4.jpg";
 const AboutSection = () => {
   return (
-    <section className="w-full bg-[#F8F0E3] py-16 px-6">
+    <section id='about' className="w-full bg-[#F8F0E3] py-16 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">
