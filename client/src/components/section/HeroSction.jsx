@@ -18,9 +18,6 @@ const HeroSction = () => {
         <p className="text-sm md:text-lg mb-6 max-w-xl">
           Discover delightful recipes and catering services for every occasion.
         </p>
-        <button className="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 px-4 rounded">
-          Explore Menu
-        </button>
       </div>
     </section>
   );

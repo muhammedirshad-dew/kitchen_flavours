@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="w-full bg-[#F8F0E3] relative z-50">
+    <nav className="w-full relative z-50">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between md:justify-center">
         
         {/* Mobile Menu Button - Left */}
@@ -19,7 +19,7 @@ const Navbar = () => {
 
         {/* Desktop Links - Left */}
         <ul className="hidden md:flex flex-1 items-center justify-center gap-8 text-gray-700 font-medium">
-          <li className="hover:text-[#B8860B] cursor-pointer"> <a href="#home">Home</a></li>
+          <li className="hover:text-[#B8860B] cursor-pointer"> <a href="#">Home</a></li>
           <li className="hover:text-[#B8860B] cursor-pointer"><a href="#services">Services</a></li>
           <li className="hover:text-[#B8860B] cursor-pointer"><a href="#gallery">Gallery</a></li>
         </ul>
@@ -33,7 +33,7 @@ const Navbar = () => {
         <ul className="hidden md:flex flex-1 items-center justify-center gap-8 text-gray-700 font-medium">
           <li className="hover:text-[#B8860B] cursor-pointer"><a href="#packages">Packages</a></li>
           <li className="hover:text-[#B8860B] cursor-pointer"><a href="#about">About</a></li>
-          <li className="hover:text-[#B8860B] cursor-pointer"><a href="#booknow">Book Now</a></li>
+          <li className="hover:text-[#B8860B] cursor-pointer"><a href="#contact">Contact Us</a></li>
         </ul>
 
         {/* Mobile Ghost Div for Centering (Optional) - Keeps logo centered on mobile if needed */}
@@ -47,11 +47,11 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-[#F8F0E3] shadow-md py-4 flex flex-col items-center gap-6 text-gray-700 font-medium transition-all duration-300">
           <a href="#" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>Home</a>
-          <a href="#" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>Services</a>
-          <a href="#" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>Gallery</a>
-          <a href="#" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>Packages</a>
-          <a href="#" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>About</a>
-          <a href="#" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>Book Now</a>
+          <a href="#services" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>Services</a>
+          <a href="#gallery" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>Gallery</a>
+          <a href="#packages" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>Packages</a>
+          <a href="#about" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>About</a>
+          <a href="#contact" className="hover:text-pink-600" onClick={() => setIsOpen(false)}>Contact Us</a>
         </div>
       )}
     </nav>
