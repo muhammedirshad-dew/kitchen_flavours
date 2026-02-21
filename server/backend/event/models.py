@@ -2,9 +2,9 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 
-class Reviw(models.Model):
+class Review(models.Model):
     email = models.EmailField(
-        max_lenght=255,
+        max_length=255,
         unique=False,
         help_text="Email address of the reviewer"
     )
@@ -16,7 +16,7 @@ class Reviw(models.Model):
         help_text="Rating of the review (1-5 stars)"
     )
     created_at = models.DateTimeField(
-        auto_now_add=True
+        auto_now_add=True,
         help_text="Timestamp when the review was created"
     )
 
@@ -24,4 +24,7 @@ class Reviw(models.Model):
         ordering = ['-created_at'] 
         verbose_name = "Review"
         verbose_name_plural = "Reviews"
+
+    def __str__(self):
+        return f"Review by {self.email} - {self.rating} stars"
 
