@@ -7,6 +7,8 @@ from .serializers import ReviewSerializer
 
 class ReviewListCreateView(generics.ListCreateAPIView):
     queryset = Review.objects.all()
-    serializer_class = ReviewSerializer  
+    serializer_class = ReviewSerializer
 
-    
+class ReviewDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
