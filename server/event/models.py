@@ -8,6 +8,18 @@ class Review(models.Model):
         unique=False,
         help_text="Email address of the reviewer"
     )
+    instagram_username = models.CharField(
+        max_length=100, 
+        blank=True, 
+        null=True,
+        help_text="Instagram username of the reviewer (optional)"
+    )
+    profile_image = models.ImageField(
+        upload_to='profile_pics/', 
+        blank=True, 
+        null=True,
+        help_text="Custom profile picture (optional)"
+    )
     review_text = models.TextField(
         help_text="Text of the review"
     )
@@ -27,4 +39,3 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Review by {self.email} - {self.rating} stars"
-
