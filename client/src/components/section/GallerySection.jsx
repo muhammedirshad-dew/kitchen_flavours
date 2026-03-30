@@ -6,6 +6,7 @@ import carousel1_3 from "../../assets/Gallery/carousel-box1-img3.jpg";
 import carousel2_1 from "../../assets/Gallery/carousel-box2-img1.jpg";
 import carousel2_2 from "../../assets/Gallery/carousel-box2-img2.jpg";
 import carousel2_3 from "../../assets/Gallery/carousel-box2-img3.jpg";
+import reel1 from "../../assets/Gallery/reel-box1-1.mp4";
 
 const GallerySection = () => {
   const images1 = [carousel1_1, carousel1_2, carousel1_3];
@@ -91,18 +92,20 @@ const GallerySection = () => {
               ))}
             </div>
 
-            {/* Instagram Reel Div */}
+            {/* Video Reel Div */}
             <div
-              className="relative overflow-hidden rounded-xl bg-blue-100
+              className="relative overflow-hidden rounded-xl bg-black
          h-[80vh] sm:h-[70vh]
          md:h-auto md:row-span-2"
             >
-              <iframe
-                src="https://www.instagram.com/p/DTHc5IoE43c/embed"
-                className="absolute inset-0 w-full h-full border-0"
-                allowFullScreen
-                title="Instagram Reel"
-              ></iframe>
+              <video
+                src={reel1}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
 
             <div className="relative overflow-hidden rounded-xl bg-brown-400 h-[50vh] md:h-auto">

@@ -4,7 +4,7 @@ import HeroVideo from "../../assets/Hero/12796344_3840_2160_60fps.mp4";
 const HeroSction = () => {
   const videoRef = useRef(null);
 
-  // Video metadata load aavumbol playback speed kuraykkaam
+ 
   const handleLoadedMetadata = () => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.25; 
