@@ -30,32 +30,36 @@ const HeroSction = () => {
 
       {/* Luxury Wedding / Silver Theme Gradient Overlay */}
       <div
-        className="absolute inset-0 z-10 opacity-40 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(135deg, rgba(192, 192, 192, 0.4) 0%, rgba(245, 245, 220, 0.2) 35%, rgba(247, 231, 206, 0.3) 70%, rgba(251, 252, 248, 0.3) 100%)",
-        }}
+        className="absolute inset-0 z-10 opacity-40 pointer-events-none bg-black/40"
+        // style={{
+        //   background:
+        //     "linear-gradient(135deg, rgba(192, 192, 192, 0.4) 0%, rgba(245, 245, 220, 0.2) 35%, rgba(247, 231, 206, 0.3) 70%, rgba(251, 252, 248, 0.3) 100%)",
+        // }}
       />
 
       {/* --- CONTENT CENTERED --- */}
       <div className="relative z-20 max-w-5xl mx-auto px-6 text-left text-white">
         <h1
-          className=" font-black text-6xl uppercase"
-          style={{ color: "#B38F6F" }}
+          className="font-['Playfair_Display'] italic text-6xl"
+          style={{ color: "#F8F0E3", textShadow: "2px 4px 8px rgba(0,0,0,0.9)" }}
         >
           MAKE YOUR WEDDING <br />
-          <span className="text-[#C0C0C0]">MEMORABLE</span>
+          MEMORABLE
         </h1>
+        <br />
 
-        <p className="text-xl md:text-2xl lg:text-3xl font-light max-w-3xl mx-auto opacity-90 drop-shadow-lg leading-relaxed">
+        <p 
+          className="font-['Patrick_Hand'] text-3xl"
+          style={{ textShadow: "2px 4px 8px rgba(0,0,0,0.9)" }}
+        >
           We make your wedding best memorable for life time. <br />
           We make the best moment of your life.
         </p>
 
         {/* Optional Call to Action Button to look more professional */}
         <div className="mt-12">
-          <button className="px-10 py-4 bg-white text-black font-bold rounded-full hover:bg-[#C0C0C0] transition-all transform hover:scale-105 shadow-2xl tracking-widest uppercase text-sm">
-            Discover More
+          <button className="px-10 py-4 bg-white font-bold rounded-full hover: transition-all transform hover:scale-105 shadow-2xl tracking-widest uppercase text-sm" style={{color:"#B38F6F"}}>
+            Book Your Event
           </button>
         </div>
       </div>
