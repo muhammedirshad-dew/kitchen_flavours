@@ -8,6 +8,8 @@ import carousel2_2 from "../../assets/Gallery/carousel-box2-img2.jpg";
 import carousel2_3 from "../../assets/Gallery/carousel-box2-img3.jpg";
 import reel1 from "../../assets/Gallery/reel-box1-1.mp4";
 
+
+
 const GallerySection = () => {
   const images1 = [carousel1_1, carousel1_2, carousel1_3];
   const images2 = [carousel2_1, carousel2_2, carousel2_3];
@@ -120,11 +122,19 @@ const GallerySection = () => {
               </div>
             </div>
 
-            <div className="md:row-span-2 bg-gray-900 text-white p-10 flex items-center justify-center rounded-xl text-center h-[50vh] md:h-auto">
-              <p className="italic text-lg">
-                "Man cannot discover new oceans unless he has the courage to
-                lose sight of the shore."
-              </p>
+            <div
+              className="relative overflow-hidden rounded-xl bg-black
+         h-[80vh] sm:h-[70vh]
+         md:h-auto md:row-span-2"
+            >
+              <video
+                src={reel1}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
 
             <div className="relative overflow-hidden rounded-xl bg-orange-200 h-[50vh] md:h-auto">
