@@ -6,16 +6,32 @@ import carousel1_3 from "../../assets/Gallery/carousel-box1-img3.jpg";
 import carousel2_1 from "../../assets/Gallery/carousel-box2-img1.jpg";
 import carousel2_2 from "../../assets/Gallery/carousel-box2-img2.jpg";
 import carousel2_3 from "../../assets/Gallery/carousel-box2-img3.jpg";
+import carousel3_1 from "../../assets/Gallery/carousel-box3-img1.jpg";
+import carousel3_2 from "../../assets/Gallery/carousel-box3-img2.jpg";
+import carousel3_3 from "../../assets/Gallery/carousel-box3-img3.jpg";
+import carousel4_1 from "../../assets/Gallery/carousel-box4-img1.jpg";
+import carousel4_2 from "../../assets/Gallery/carousel-box4-img2.jpg";
+import carousel4_3 from "../../assets/Gallery/carousel-box4-img3.jpg";
+
 import reel1 from "../../assets/Gallery/reel-box1-1.mp4";
+import reel2 from "../../assets/Gallery/reel-box1-2.mp4";
+import reel3 from "../../assets/Gallery/reel-box1-3.mp4";
+import reel4 from "../../assets/Gallery/reel-box1-4.mp4";
 
 
 
 const GallerySection = () => {
   const images1 = [carousel1_1, carousel1_2, carousel1_3];
   const images2 = [carousel2_1, carousel2_2, carousel2_3];
+  const images3 = [carousel3_1, carousel3_2, carousel3_3];
+  const images4 = [carousel4_1, carousel4_2, carousel4_3];
+
   
   const [currentIndex1, setCurrentIndex1] = useState(0);
   const [currentIndex2, setCurrentIndex2] = useState(0);
+  const [currentIndex3, setCurrentIndex3] = useState(0);
+  const [currentIndex4, setCurrentIndex4] = useState(0);
+
 
   useEffect(() => {
     const timer1 = setInterval(() => {
@@ -33,7 +49,7 @@ const GallerySection = () => {
   }, [images1.length, images2.length]);
 
   return (
-    <div>
+    <div className=" bg-gray-100">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -111,15 +127,14 @@ const GallerySection = () => {
             </div>
 
             <div className="relative overflow-hidden rounded-xl bg-brown-400 h-[50vh] md:h-auto">
-              <img
-                src="cliffs.jpg"
-                className="absolute inset-0 h-full w-full object-cover"
+              <video
+                src={reel3}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="relative p-6 text-white h-full flex flex-col justify-end">
-                <h2 className="text-lg font-bold">
-                  Maui By Air: The Best Way Around The Island
-                </h2>
-              </div>
             </div>
 
             <div
@@ -128,7 +143,7 @@ const GallerySection = () => {
          md:h-auto md:row-span-2"
             >
               <video
-                src={reel1}
+                src={reel2}
                 autoPlay
                 muted
                 loop
@@ -138,37 +153,40 @@ const GallerySection = () => {
             </div>
 
             <div className="relative overflow-hidden rounded-xl bg-orange-200 h-[50vh] md:h-auto">
-              <img
-                src="desert.jpg"
-                className="absolute inset-0 h-full w-full object-cover"
+              <video
+                src={reel4}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="relative p-6 text-white h-full flex flex-col justify-end">
-                <h2 className="text-lg font-bold">Traveling To USA</h2>
-              </div>
             </div>
 
             <div className="md:col-span-2 relative overflow-hidden rounded-xl h-[50vh] md:h-auto">
-              <img
-                src="underwater.jpg"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-              <div className="relative p-6 text-white h-full flex flex-col justify-end">
-                <h2 className="text-xl font-bold">
-                  A Guide To Rocky Mountain Vacations
-                </h2>
-              </div>
+              {images3.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Gallery 1-${index + 1}`}
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+                    index === currentIndex1 ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
             </div>
 
             <div className="relative overflow-hidden rounded-xl bg-brown-400 h-[50vh] md:h-auto">
-              <img
-                src="cliffs.jpg"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-              <div className="relative p-6 text-white h-full flex flex-col justify-end">
-                <h2 className="text-lg font-bold">
-                  Maui By Air: The Best Way Around The Island
-                </h2>
-              </div>
+              {images4.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Gallery 1-${index + 1}`}
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+                    index === currentIndex1 ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>

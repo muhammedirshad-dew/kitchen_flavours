@@ -1,25 +1,37 @@
 import React from 'react'
 import aboutImg from"../../assets/About/about-1.jpeg";
 import aboutImg2 from"../../assets/About/about-2.jpg";
-import aboutImg3 from"../../assets/About/about-3.gif";
+import aboutImg3 from "../../assets/About/our-team.jpg";
 import aboutImg4 from"../../assets/About/about-4.jpg";
 const AboutSection = () => {
   return (
-    <section id='about' className="w-full bg-[#F8F0E3] py-16 px-6">
+    <section id="about" className="w-full py-16 px-6  bg-gray-100">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h1
+            className="font-bold text-3xl"
+            style={{ fontFamily: "fantasy", color: "#B38F6F" }}
+          >
             About Us
-          </h2>
+          </h1>
           <div className="flex items-center justify-center gap-4">
-            <div className="h-px w-12 bg-gray-400"></div>
-            <div className="w-3 h-3 rounded-full bg-pink-400"></div>
-            <div className="h-px w-12 bg-gray-400"></div>
+            <div
+              className="h-px w-12 "
+              style={{ backgroundColor: "#B38F6F" }}
+            ></div>
+            <div
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: "#B38F6F" }}
+            ></div>
+            <div
+              className="h-px w-12"
+              style={{ backgroundColor: "#B38F6F" }}
+            ></div>
           </div>
         </div>
 
-        <div className="py-20 px-6  max-w-6xl mx-auto">
+        <div className="px-6  max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* LEFT SIDE */}
             {/*About Us*/}
@@ -34,31 +46,39 @@ const AboutSection = () => {
             {/* RIGHT SIDE */}
             <div className="space-y-6">
               <div>
-                <p className="leading-relaxed text-gray-600 mb-6">
+                <h2 className="text-xl leading-relaxed text-[#4A3428]  flex items-center h-40">
                   We are a professional catering service delivering high-quality
                   food and exceptional service for all types of events. Our
                   focus is on taste, hygiene, and customer satisfaction.
-                </p>
+                </h2>
 
-                <div className="bg-gray-100 p-6 rounded-xl">
+                {/* <div className="bg-gray-100 p-6 rounded-xl">
                   <h3 className="text-4xl font-bold text-brown-700">
                     10 Years
                   </h3>
                   <p className="mt-2 text-gray-600">
                     of excellence in catering services
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
             {/* LEFT SIDE */}
             <div className="space-y-6">
               {/* Experence */}
               <div>
-                <h3 className="text-xl font-semibold mb-2">Experience</h3>
-                <p className="leading-relaxed text-gray-600 mb-6">
-                  With over 10 years of experience delivering exceptional
-                  catering services for weddings, birthdays, corporate events,
-                  and private functions
+                <h3 className="text-xl font-semibold mb-2 text-[#B38F6F]">
+                  Experience
+                </h3>
+                <p className="leading-relaxed text-[#4A3428] ">
+                  With over 10 years of experience in the event management
+                  industry, we have successfully delivered memorable weddings,
+                  corporate events, birthday celebrations, and private parties
+                  with professionalism and creativity.
+                  <br />
+                  Throughout the years, we have built a strong reputation for
+                  quality service, attention to detail, and flawless event
+                  execution. Every event is carefully planned to create
+                  unforgettable experiences and lasting memories.
                 </p>
               </div>
             </div>
@@ -83,35 +103,37 @@ const AboutSection = () => {
             {/* RIGHT SIDE */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold mb-2">Our Team</h3>
-                <p className="leading-relaxed text-gray-600 mb-6">
-                  Professional chefs and experienced event managers ensuring
-                  flawless execution.
+                <h3 className="text-xl font-semibold mb-2 text-[#B38F6F]">
+                  Our Team
+                </h3>
+                <p className="leading-relaxed text-[#4A3428]">
+                  Our team consists of experienced event planners, creative
+                  designers, coordinators, and support staff who work together
+                  to make every event successful. With strong teamwork,
+                  attention to detail, and a passion for excellence, we ensure
+                  that every stage of the event is managed smoothly and
+                  professionally.
                 </p>
               </div>
             </div>
+          </div>
 
-            {/* LEFT SIDE */}
-            <div className="space-y-6">
-              {/* Why Choose Us */}
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Why Choose Us</h3>
-
-                <ul className="space-y-3 text-gray-600">
-                  <li>• Hygiene & Quality Food</li>
-                  <li>• On-time Service</li>
-                  <li>• Customizable Menus</li>
-                </ul>
-              </div>
-            </div>
-            {/* RIGHT SIDE */}
-            <div>
-              <img
-                src={aboutImg4}
-                alt="About Us"
-                className="w-full rounded-xl"
-              />
-            </div>
+          <div className="mt-20">
+            <h1
+              className="text-3xl font-extrabold mb-4 text-center "
+              style={{ color: "#B38F6F" }}
+            >
+              Why Choose Us
+            </h1>
+            <p className="text-2xl font-mono text-[#4A3428]">
+              Why Choose Us We are committed to delivering exceptional event
+              experiences with creativity, professionalism, and attention to
+              detail. With years of experience, reliable service, and a
+              dedicated team, we ensure every event is planned perfectly and
+              executed smoothly. From the initial planning stage to the final
+              celebration, we focus on quality, customer satisfaction, and
+              creating unforgettable memories for every client.
+            </p>
           </div>
         </div>
       </div>

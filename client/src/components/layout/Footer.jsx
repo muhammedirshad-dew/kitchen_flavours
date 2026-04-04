@@ -1,62 +1,71 @@
 import React from "react";
-import { Twitter, Instagram } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
+import logo from "../../assets/logo/kitchen_flavours.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400  py-12">
+    <footer className="bg-black text-gray-400 ">
       {/* Top Section */}
-      <div className="flex flex-col items-center text-center space-y-5">
+      <div className="flex flex-col items-center text-center space-y-6 ">
         {/* Logo */}
-        <div className="w-12 h-12 bg-lime-400 rounded-xl flex items-center justify-center text-black font-bold">
-          ●
+        <div>
+          <img src={logo} alt="Kitchen Flavours Logo" className="w-30 cursor-pointer"/>
         </div>
 
-        <h2 className="text-white text-xl font-bold tracking-wide">LUMINA</h2>
-
         <p className="max-w-md text-sm leading-relaxed">
-          Building the infrastructure for the next generation of digital
-          creators and mobile-first teams.
+          We create memorable events with creativity, professionalism, and
+          attention to detail. From weddings to corporate functions, we make
+          every celebration special.
         </p>
 
         {/* Links */}
         <div className="flex flex-wrap justify-center gap-8 text-sm pt-2">
-          <a href="#" className="hover:text-lime-400">
-            Product
+          <a href="#" className="hover:text-[#B38F6F]">
+            Home
           </a>
-          <a href="#" className="hover:text-lime-400">
-            Changelog
+          <a href="#services" className="hover:text-[#B38F6F]">
+            Services
           </a>
-          <a href="#" className="hover:text-lime-400">
-            Privacy
+          <a href="#gallery" className="hover:text-[#B38F6F]">
+            Gallery
           </a>
-          <a href="#" className="hover:text-lime-400">
-            Terms
+          <a href="#about" className="hover:text-[#B38F6F]">
+            About
           </a>
-          <a href="#" className="hover:text-lime-400">
+          <a href="#contact" className="hover:text-[#B38F6F]">
             Contact
           </a>
         </div>
 
         {/* Social Icons */}
         <div className="flex gap-4 pt-3">
-          <button className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-lime-400 hover:text-black transition">
-            <Twitter size={18} />
-          </button>
-          <button className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-lime-400 hover:text-black transition">
+          <a
+            className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#B38F6F] hover:text-black transition"
+            href="https://www.facebook.com/profile.php?id=100054443981327"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Facebook size={18} />
+          </a>
+          <a
+            className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#B38F6F] hover:text-black transition"
+            href="https://www.instagram.com/kitchen_flavours__/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Instagram size={18} />
-          </button>
+          </a>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="border-t border-gray-800 my-8"></div>
+      <div className="border-t border-gray-800 my-4"></div>
 
       {/* Bottom Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 pl-1.5">
-        <p className="text-xs text-gray-500">
-          © 2026 Lumina Technologies Inc. All rights reserved.
+      <div className="flex flex-col md:flex-row items-center justify-center py-3">
+        <p className="text-xs text-gray-500 text-center">
+          © 2026 Kitchen Flavours Event Management. All Rights Reserved.
         </p>
-
       </div>
     </footer>
   );

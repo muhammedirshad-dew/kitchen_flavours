@@ -4,17 +4,16 @@ import HeroVideo from "../../assets/Hero/12796344_3840_2160_60fps.mp4";
 const HeroSction = () => {
   const videoRef = useRef(null);
 
- 
   const handleLoadedMetadata = () => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.25; 
+      videoRef.current.playbackRate = 0.25;
     }
   };
 
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen overflow-hidden flex items-center justify-center"
+      className="relative w-full min-h-screen overflow-hidden flex items-center justify-center  bg-gray-100"
     >
       {/* Background Video */}
       <video
@@ -41,15 +40,18 @@ const HeroSction = () => {
       <div className="relative z-20 max-w-5xl mx-auto px-6 text-left text-white">
         <h1
           className="font-['Playfair_Display'] italic text-6xl"
-          style={{ color: "#F8F0E3", textShadow: "2px 4px 8px rgba(0,0,0,0.9)" }}
+          style={{
+            color: "#F8F0E3",
+            textShadow: "2px 4px 8px rgba(0,0,0,0.9)",
+          }}
         >
           MAKE YOUR WEDDING <br />
           MEMORABLE
         </h1>
         <br />
 
-        <p 
-          className="font-['Patrick_Hand'] text-3xl"
+        <p
+          className="font-extrabold text-3xl"
           style={{ textShadow: "2px 4px 8px rgba(0,0,0,0.9)" }}
         >
           We make your wedding best memorable for life time. <br />
@@ -58,9 +60,13 @@ const HeroSction = () => {
 
         {/* Optional Call to Action Button to look more professional */}
         <div className="mt-12">
-          <button className="px-10 py-4 bg-white font-bold rounded-full hover: transition-all transform hover:scale-105 shadow-2xl tracking-widest uppercase text-sm" style={{color:"#B38F6F"}}>
+          <a
+            href="#contact"
+            className="inline-flex px-10 py-4 bg-white font-bold rounded-full transition-all transform hover:scale-105 shadow-2xl tracking-widest uppercase text-sm"
+            style={{ color: "#B38F6F" }}
+          >
             Book Your Event
-          </button>
+          </a>
         </div>
       </div>
     </section>

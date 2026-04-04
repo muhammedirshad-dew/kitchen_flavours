@@ -1,6 +1,5 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../../assets/logo/kitchen_flavours.png";
 import { Instagram, Facebook } from "lucide-react";
 
 const Navbar = () => {
@@ -46,16 +45,16 @@ const Navbar = () => {
 
         <div className="inline-block shrink-0 px-6 ">
           <h1
-            className="font-bold text-3xl"
+            className="font-bold text-3xl inline-block cursor-pointer hover:text-[#B8860B]"
             style={{ fontFamily: "fantasy", color: "#B38F6F" }}
           >
             Kitchen Flavours
           </h1>
           <h2
-            className="font-bold text-2xl -mt-2"
+            className="font-bold text-2xl -mt-2 cursor-pointer"
             style={{ fontFamily: "math", color: "#B38F6F" }}
           >
-            Event Company
+            Event Planner
           </h2>
         </div>
         {/* Desktop Links - Right */}
