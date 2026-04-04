@@ -1,5 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Star, Send, Loader2, Trash2, Edit, X, PlusCircle, Instagram, Camera } from "lucide-react";
+import {
+  Star,
+  Send,
+  Loader2,
+  Trash2,
+  Edit,
+  X,
+  PlusCircle,
+  Instagram,
+  Camera,
+} from "lucide-react";
 import axios from "axios";
 
 const ReviewSection = () => {
@@ -53,9 +63,13 @@ const ReviewSection = () => {
 
     try {
       if (editingId) {
-        await axios.patch(`http://127.0.0.1:8000/api/reviews/${editingId}/`, data, {
-          headers: { "Content-Type": "multipart/form-data" },
-        });
+        await axios.patch(
+          `http://127.0.0.1:8000/api/reviews/${editingId}/`,
+          data,
+          {
+            headers: { "Content-Type": "multipart/form-data" },
+          },
+        );
         alert("Review updated!");
       } else {
         await axios.post("http://127.0.0.1:8000/api/reviews/", data, {
@@ -95,12 +109,17 @@ const ReviewSection = () => {
     });
     setSelectedFile(null);
     setIsFormOpen(true);
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   };
 
   const cancelEdit = () => {
     setEditingId(null);
-    setFormData({ email: "", instagram_username: "", review_text: "", rating: 5 });
+    setFormData({
+      email: "",
+      instagram_username: "",
+      review_text: "",
+      rating: 5,
+    });
     setSelectedFile(null);
     if (fileInputRef.current) fileInputRef.current.value = "";
     if (!editingId) setIsFormOpen(false);
@@ -114,7 +133,7 @@ const ReviewSection = () => {
     }
     // 2. If Instagram username exists, use Unavatar
     if (review.instagram_username) {
-      return `https://unavatar.io/instagram/${review.instagram_username.trim().replace('@', '')}`;
+      return `https://unavatar.io/instagram/${review.instagram_username.trim().replace("@", "")}`;
     }
     // 3. Fallback to Initials
     const cleanEmail = review.email.trim().toLowerCase();
@@ -287,7 +306,7 @@ const ReviewSection = () => {
 
                 {/* --- PHOTO UPLOAD FIELD --- */}
                 <div className="bg-gray-50 p-6 rounded-2xl border-2 border-dashed border-gray-200">
-                  <label className="block text-sm font-bold text-gray-700 mb-3 flex items-center gap-2">
+                  <label className="text-sm font-bold text-gray-700 mb-3 flex items-center gap-2">
                     <Camera className="w-4 h-4" /> Upload Profile Photo
                     (Optional)
                   </label>
