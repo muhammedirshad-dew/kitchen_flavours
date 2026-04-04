@@ -39,7 +39,7 @@ const ContactSection = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Message sent successfully to irashimuahmmed@gamil.com!");
+          alert("Message sent successfully to irashimuahmmed@gmail.com!");
           setFormData({
             user_name: "",
             user_email: "",
@@ -117,7 +117,7 @@ const ContactSection = () => {
             </a>
 
             <a
-              href="mailto:irashimuahmmed@gamil.com"
+              href="mailto:irashimuahmmed@gmail.com"
               className="flex items-start gap-4 hover:scale-105 transition group"
             >
               <div className="bg-white text-black p-3 rounded-full group-hover:bg-[#B38F6F] transition-colors">
@@ -125,7 +125,7 @@ const ContactSection = () => {
               </div>
               <div className="text-left">
                 <h3 className="text-[#B38F6F] font-semibold text-xl">Email</h3>
-                <p className="text-[#B38F6F]">irashimuahmmed@gamil.com</p>
+                <p className="text-[#B38F6F]">irashimuahmmed@gmail.com</p>
               </div>
             </a>
 
