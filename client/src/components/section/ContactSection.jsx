@@ -6,6 +6,7 @@ import BgImg from "../../assets/Contact/contact.jpg";
 const ContactSection = () => {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
@@ -39,7 +40,7 @@ const ContactSection = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Message sent successfully to irashimuahmmed@gmail.com!");
+          setShowModal(true);
           setFormData({
             user_name: "",
             user_email: "",
@@ -62,6 +63,40 @@ const ContactSection = () => {
       id="contact"
       className="relative w-full min-h-screen bg-black text-white "
     >
+      {/* Success Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 bg-black/60 backdrop-blur-sm">
+          <div className="bg-white rounded-lg p-8 max-w-sm w-full text-center shadow-2xl transform transition-all animate-in fade-in zoom-in duration-300">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg
+                className="w-8 h-8 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Success!</h3>
+            <p className="text-gray-600 mb-6">
+              Your message has been sent successfully. We will get back to you
+              soon!
+            </p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="w-full py-3 bg-[#B38F6F] hover:bg-[#79604b] text-white rounded-md font-bold transition-colors shadow-lg active:scale-95"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
@@ -70,62 +105,62 @@ const ContactSection = () => {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-10 md:mb-12">
           <h2
-            className="font-bold text-3xl"
+            className="font-bold text-2xl sm:text-3xl"
             style={{ fontFamily: "fantasy", color: "#B38F6F" }}
           >
             Contact Us
           </h2>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4 mt-2">
             <div
-              className="h-px w-12 "
+              className="h-px w-10 sm:w-12 "
               style={{ backgroundColor: "#B38F6F" }}
             ></div>
             <div
-              className="w-3 h-3 rounded-full"
+              className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full"
               style={{ backgroundColor: "#B38F6F" }}
             ></div>
             <div
-              className="h-px w-12"
+              className="h-px w-10 sm:w-12"
               style={{ backgroundColor: "#B38F6F" }}
             ></div>
           </div>
-          <p className="text-lime-100 max-w-3xl mx-auto">
+          <p className="text-lime-100 max-w-3xl mx-auto mt-4 text-sm sm:text-base px-4">
             Get in touch with us for your next event! We are just a message
             away.
           </p>
         </div>
 
         {/* Main Layout */}
-        <div className="grid md:grid-cols-2 gap-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-start">
           {/* Left Info */}
-          <div className="space-y-8 my-8">
+          <div className="space-y-6 md:space-y-8 my-4 md:my-8">
             <a
               href="tel:9745484293"
-              className="flex items-start gap-4 hover:scale-105 transition group"
+              className="flex items-start gap-4 hover:scale-105 transition group p-2"
             >
-              <div className="bg-white text-black p-3 rounded-full group-hover:bg-[#B38F6F] transition-colors">
-                <Phone size={24} />
+              <div className="bg-white text-black p-3 rounded-full group-hover:bg-[#B38F6F] transition-colors shrink-0">
+                <Phone size={20} className="sm:w-6 sm:h-6" />
               </div>
               <div className="text-left">
-                <h3 className="text-[#B38F6F] font-semibold text-xl">Phone</h3>
-                <p className="text-[#B38F6F]">9745484293</p>
+                <h3 className="text-[#B38F6F] font-semibold text-lg sm:text-xl">Phone</h3>
+                <p className="text-[#B38F6F] text-sm sm:text-base">9745484293</p>
               </div>
             </a>
 
             <a
               href="mailto:irashimuahmmed@gmail.com"
-              className="flex items-start gap-4 hover:scale-105 transition group"
+              className="flex items-start gap-4 hover:scale-105 transition group p-2"
             >
-              <div className="bg-white text-black p-3 rounded-full group-hover:bg-[#B38F6F] transition-colors">
-                <Mail size={24} />
+              <div className="bg-white text-black p-3 rounded-full group-hover:bg-[#B38F6F] transition-colors shrink-0">
+                <Mail size={20} className="sm:w-6 sm:h-6" />
               </div>
               <div className="text-left">
-                <h3 className="text-[#B38F6F] font-semibold text-xl">Email</h3>
-                <p className="text-[#B38F6F]">irashimuahmmed@gmail.com</p>
+                <h3 className="text-[#B38F6F] font-semibold text-lg sm:text-xl">Email</h3>
+                <p className="text-[#B38F6F] text-sm sm:text-base break-all">irashimuahmmed@gmail.com</p>
               </div>
             </a>
 
@@ -133,31 +168,31 @@ const ContactSection = () => {
               href="https://wa.me/9745484293"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-start gap-4 hover:scale-105 transition group"
+              className="flex items-start gap-4 hover:scale-105 transition group p-2"
             >
-              <div className="bg-white text-black p-3 rounded-full group-hover:bg-[#B38F6F] transition-colors">
-                <MessageCircle size={24} />
+              <div className="bg-white text-black p-3 rounded-full group-hover:bg-[#B38F6F] transition-colors shrink-0">
+                <MessageCircle size={20} className="sm:w-6 sm:h-6" />
               </div>
               <div className="text-left">
-                <h3 className="text-[#B38F6F] font-semibold text-xl">
+                <h3 className="text-[#B38F6F] font-semibold text-lg sm:text-xl">
                   WhatsApp
                 </h3>
-                <p className="text-[#B38F6F]">9745484293</p>
+                <p className="text-[#B38F6F] text-sm sm:text-base">9745484293</p>
               </div>
             </a>
           </div>
 
           {/* Right Form */}
-          <div className="bg-white text-[#B38F6F] rounded-md p-8 shadow-lg">
-            <h3 className="text-3xl font-bold mb-6">Send Message</h3>
+          <div className="bg-white text-[#B38F6F] rounded-xl p-6 sm:p-8 shadow-lg mx-auto w-full max-w-lg md:max-w-none">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-6">Send Message</h3>
 
-            <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-5 sm:space-y-6">
               <input
                 type="text"
                 name="user_name"
                 placeholder="Full Name"
                 required
-                className="w-full border-b border-gray-400 outline-none py-2 focus:border-cyan-500 transition-colors"
+                className="w-full border-b border-gray-400 outline-none py-2 focus:border-[#B38F6F] transition-colors text-sm sm:text-base bg-transparent"
                 value={formData.user_name}
                 onChange={handleChange}
               />
@@ -167,7 +202,7 @@ const ContactSection = () => {
                 name="user_email"
                 placeholder="Your Email"
                 required
-                className="w-full border-b border-gray-400 outline-none py-2 focus:border-cyan-500 transition-colors"
+                className="w-full border-b border-gray-400 outline-none py-2 focus:border-[#B38F6F] transition-colors text-sm sm:text-base bg-transparent"
                 value={formData.user_email}
                 onChange={handleChange}
               />
@@ -177,7 +212,7 @@ const ContactSection = () => {
                 name="user_phone"
                 placeholder="Phone Number"
                 required
-                className="w-full border-b border-gray-400 outline-none py-2 focus:border-cyan-500 transition-colors"
+                className="w-full border-b border-gray-400 outline-none py-2 focus:border-[#B38F6F] transition-colors text-sm sm:text-base bg-transparent"
                 value={formData.user_phone}
                 onChange={handleChange}
               />
@@ -186,7 +221,7 @@ const ContactSection = () => {
                 name="message"
                 placeholder="Type your Message..."
                 required
-                className="w-full border-b border-gray-400 outline-none py-2 resize-none focus:border-cyan-500 transition-colors"
+                className="w-full border-b border-gray-400 outline-none py-2 resize-none focus:border-[#B38F6F] transition-colors text-sm sm:text-base bg-transparent"
                 rows="3"
                 value={formData.message}
                 onChange={handleChange}
@@ -195,10 +230,10 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={!isFormValid || loading}
-                className={`w-full py-3 rounded-md transition font-bold flex items-center justify-center space-x-2 shadow-lg ${
+                className={`w-full py-3 sm:py-4 rounded-md transition font-bold flex items-center justify-center space-x-2 shadow-lg text-sm sm:text-base ${
                   !isFormValid || loading
                     ? "bg-gray-300 cursor-not-allowed text-gray-500"
-                    : "bg-[#B38F6F] hover:bg-[#79604b] text-white active:scale-95"
+                    : "bg-[#B38F6F] hover:bg-[#96765a] text-white active:scale-95"
                 }`}
               >
                 {loading ? (

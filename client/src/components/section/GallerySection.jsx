@@ -77,13 +77,13 @@ const GallerySection = () => {
       </div>
       <section id="gallery">
         <div
-          className="w-full py-10 px-6 bg-cover bg-center h-screen"
+          className="w-full py-10 px-6 bg-cover bg-center h-[40vh] md:h-screen"
           style={{ backgroundImage: `url(${BgImg})` }}
         ></div>
-        <div className="p-6 bg-gray-100 min-h-screen">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:auto-rows-[250px]">
+        <div className="p-4 sm:p-6 bg-gray-100 min-h-screen">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:auto-rows-[250px]">
             {/* Carousel 1 Div */}
-            <div className="md:col-span-2 md:row-span-1 relative overflow-hidden rounded-xl bg-gray-800 text-white h-[50vh] md:h-auto">
+            <div className="md:col-span-2 md:row-span-1 relative overflow-hidden rounded-xl bg-gray-800 text-white h-[30vh] sm:h-[40vh] md:h-auto">
               {images1.map((img, index) => (
                 <img
                   key={index}
@@ -97,7 +97,7 @@ const GallerySection = () => {
             </div>
 
             {/* Carousel 2 Div */}
-            <div className="relative overflow-hidden rounded-xl bg-orange-200 h-[50vh] md:h-auto">
+            <div className="relative overflow-hidden rounded-xl bg-orange-200 h-[30vh] sm:h-[40vh] md:h-auto">
               {images2.map((img, index) => (
                 <img
                   key={index}
@@ -110,10 +110,10 @@ const GallerySection = () => {
               ))}
             </div>
 
-            {/* Video Reel Div */}
+            {/* Video Reel Div 1 */}
             <div
               className="relative overflow-hidden rounded-xl bg-black
-         h-[80vh] sm:h-[70vh]
+         h-[60vh] sm:h-[70vh]
          md:h-auto md:row-span-2"
             >
               <video
@@ -126,7 +126,7 @@ const GallerySection = () => {
               />
             </div>
 
-            <div className="relative overflow-hidden rounded-xl bg-brown-400 h-[50vh] md:h-auto">
+            <div className="relative overflow-hidden rounded-xl bg-brown-400 h-[30vh] sm:h-[40vh] md:h-auto">
               <video
                 src={reel3}
                 autoPlay
@@ -137,9 +137,10 @@ const GallerySection = () => {
               />
             </div>
 
+            {/* Video Reel Div 2 */}
             <div
               className="relative overflow-hidden rounded-xl bg-black
-         h-[80vh] sm:h-[70vh]
+         h-[60vh] sm:h-[70vh]
          md:h-auto md:row-span-2"
             >
               <video
@@ -152,7 +153,7 @@ const GallerySection = () => {
               />
             </div>
 
-            <div className="relative overflow-hidden rounded-xl bg-orange-200 h-[50vh] md:h-auto">
+            <div className="relative overflow-hidden rounded-xl bg-orange-200 h-[30vh] sm:h-[40vh] md:h-auto">
               <video
                 src={reel4}
                 autoPlay
@@ -163,12 +164,12 @@ const GallerySection = () => {
               />
             </div>
 
-            <div className="md:col-span-2 relative overflow-hidden rounded-xl h-[50vh] md:h-auto">
+            <div className="md:col-span-1 lg:col-span-2 relative overflow-hidden rounded-xl h-[30vh] sm:h-[40vh] md:h-auto">
               {images3.map((img, index) => (
                 <img
                   key={index}
                   src={img}
-                  alt={`Gallery 1-${index + 1}`}
+                  alt={`Gallery 3-${index + 1}`}
                   className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
                     index === currentIndex1 ? "opacity-100" : "opacity-0"
                   }`}
@@ -176,12 +177,12 @@ const GallerySection = () => {
               ))}
             </div>
 
-            <div className="relative overflow-hidden rounded-xl bg-brown-400 h-[50vh] md:h-auto">
+            <div className="relative overflow-hidden rounded-xl bg-brown-400 h-[30vh] sm:h-[40vh] md:h-auto">
               {images4.map((img, index) => (
                 <img
                   key={index}
                   src={img}
-                  alt={`Gallery 1-${index + 1}`}
+                  alt={`Gallery 4-${index + 1}`}
                   className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
                     index === currentIndex1 ? "opacity-100" : "opacity-0"
                   }`}

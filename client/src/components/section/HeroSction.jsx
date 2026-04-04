@@ -37,32 +37,32 @@ const HeroSction = () => {
       />
 
       {/* --- CONTENT CENTERED --- */}
-      <div className="relative z-20 max-w-5xl mx-auto px-6 text-left text-white">
+      <div className="relative z-20 max-w-5xl mx-auto px-6 text-left text-white mt-10 md:mt-0">
         <h1
-          className="font-['Playfair_Display'] italic text-6xl"
+          className="font-['Playfair_Display'] italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight"
           style={{
             color: "#F8F0E3",
             textShadow: "2px 4px 8px rgba(0,0,0,0.9)",
           }}
         >
-          MAKE YOUR WEDDING <br />
+          MAKE YOUR WEDDING <br className="hidden sm:block" />
           MEMORABLE
         </h1>
-        <br />
+        <div className="h-4 md:h-8"></div>
 
         <p
-          className="font-extrabold text-3xl"
+          className="font-extrabold text-xl sm:text-2xl md:text-3xl max-w-2xl leading-relaxed"
           style={{ textShadow: "2px 4px 8px rgba(0,0,0,0.9)" }}
         >
-          We make your wedding best memorable for life time. <br />
+          We make your wedding best memorable for life time. <br className="hidden md:block" />
           We make the best moment of your life.
         </p>
 
         {/* Optional Call to Action Button to look more professional */}
-        <div className="mt-12">
+        <div className="mt-8 md:mt-12">
           <a
             href="#contact"
-            className="inline-flex px-10 py-4 bg-white font-bold rounded-full transition-all transform hover:scale-105 shadow-2xl tracking-widest uppercase text-sm"
+            className="inline-flex px-8 md:px-10 py-3 md:py-4 bg-white font-bold rounded-full transition-all transform hover:scale-105 shadow-2xl tracking-widest uppercase text-xs md:text-sm"
             style={{ color: "#B38F6F" }}
           >
             Book Your Event

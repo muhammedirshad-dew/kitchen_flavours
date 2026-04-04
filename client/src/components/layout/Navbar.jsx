@@ -5,12 +5,20 @@ import { Instagram, Facebook } from "lucide-react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
+  const navLinks = [
+    { name: "HOME", href: "#" },
+    { name: "SERVICES", href: "#services" },
+    { name: "GALLERY", href: "#gallery" },
+    { name: "ABOUT", href: "#about" },
+    { name: "CONTACT", href: "#contact" },
+  ];
+
   return (
     <nav className="w-full relative z-50 bg-transparent">
-      <div className="max-w-7xl mx-auto px-15 py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-15 py-3 flex items-center justify-between">
         {/* Mobile Menu Button - Left */}
         <button
-          className="md:hidden focus:outline-none"
+          className="md:hidden focus:outline-none z-50 p-2"
           style={{ color: "#B38F6F" }}
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -19,119 +27,76 @@ const Navbar = () => {
 
         {/* Desktop Links - Left */}
         <ul
-          className="hidden md:flex  items-center justify-items-center gap-6 font-medium "
+          className="hidden md:flex items-center gap-6 font-medium"
           style={{ color: "#B38F6F" }}
         >
-          <li className="hover:text-[#B8860B] cursor-pointer">
-            {" "}
-            <a href="#">HOME</a>
-          </li>
-          <li className="hover:text-[#B8860B] cursor-pointer">
-            <a href="#services">SERVICES</a>
-          </li>
-          <li className="hover:text-[#B8860B] cursor-pointer">
-            <a href="#gallery">GALLERY</a>
-          </li>
-          {/* <li className="hover:text-[#B8860B] cursor-pointer">
-            <a href="#packages">Packages</a>
-          </li> */}
-          <li className="hover:text-[#B8860B] cursor-pointer">
-            <a href="#about">ABOUT</a>
-          </li>
-          <li className="hover:text-[#B8860B] cursor-pointer">
-            <a href="#contact">CONTACT</a>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.name} className="hover:text-[#B8860B] cursor-pointer transition-colors">
+              <a href={link.href}>{link.name}</a>
+            </li>
+          ))}
         </ul>
 
-        <div className="inline-block shrink-0 px-6 ">
+        {/* Center Logo Section */}
+        <div className="flex flex-col items-center justify-center text-center px-2 sm:px-6">
           <h1
-            className="font-bold text-3xl inline-block cursor-pointer hover:text-[#B8860B]"
+            className="font-bold text-xl sm:text-2xl md:text-3xl cursor-pointer hover:text-[#B8860B] whitespace-nowrap"
             style={{ fontFamily: "fantasy", color: "#B38F6F" }}
           >
             Kitchen Flavours
           </h1>
           <h2
-            className="font-bold text-2xl -mt-2 cursor-pointer"
+            className="font-bold text-lg sm:text-xl md:text-2xl -mt-1 md:-mt-2 cursor-pointer whitespace-nowrap"
             style={{ fontFamily: "math", color: "#B38F6F" }}
           >
             Event Planner
           </h2>
         </div>
-        {/* Desktop Links - Right */}
+
+        {/* Social Links - Right */}
         <ul
-          className="flex items-center justify-end gap-6 font-medium"
+          className="flex items-center justify-end gap-3 sm:gap-6 font-medium"
           style={{ color: "#B38F6F" }}
         >
-          <li className="hover:text-[#B8860B] cursor-pointer">
+          <li className="hover:text-[#B8860B] cursor-pointer transition-colors">
             <a
               href="https://www.instagram.com/kitchen_flavours__/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Instagram size={24} />
+              <Instagram size={24} className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
           </li>
-          <li className="hover:text-[#B8860B] cursor-pointer">
+          <li className="hover:text-[#B8860B] cursor-pointer transition-colors">
             <a
               href="https://www.facebook.com/profile.php?id=100054443981327"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Facebook size={24} />
+              <Facebook size={24} className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
           </li>
         </ul>
-        {/* Mobile Ghost Div for Centering (Optional) - Keeps logo centered on mobile if needed */}
-        <div className="w-7 md:hidden"></div>
       </div>
 
       {/* Mobile Menu Dropdown */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-screen bg-[#F8F0E3] shadow-md py-4 flex flex-col items-center gap-6 text-gray-700 font-medium transition-all duration-300">
+      <div
+        className={`md:hidden fixed inset-0 bg-white/95 backdrop-blur-md z-40 flex flex-col items-center justify-center gap-8 text-2xl font-bold transition-all duration-300 ease-in-out ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        style={{ color: "#B38F6F" }}
+      >
+        {navLinks.map((link) => (
           <a
-            href="#"
-            className="hover:text-pink-600"
+            key={link.name}
+            href={link.href}
+            className="hover:text-[#B8860B] transition-transform active:scale-95"
             onClick={() => setIsOpen(false)}
           >
-            Home
+            {link.name}
           </a>
-          <a
-            href="#services"
-            className="hover:text-pink-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Services
-          </a>
-          <a
-            href="#gallery"
-            className="hover:text-pink-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Gallery
-          </a>
-          <a
-            href="#packages"
-            className="hover:text-pink-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Packages
-          </a>
-          <a
-            href="#about"
-            className="hover:text-pink-600"
-            onClick={() => setIsOpen(false)}
-          >
-            About
-          </a>
-          <a
-            href="#contact"
-            className="hover:text-pink-600"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact Us
-          </a>
-        </div>
-      )}
+        ))}
+      </div>
     </nav>
   );
 };
