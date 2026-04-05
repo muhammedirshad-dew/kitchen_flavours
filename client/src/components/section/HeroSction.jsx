@@ -39,7 +39,7 @@ const HeroSction = () => {
       {/* --- CONTENT CENTERED --- */}
       <div className="relative z-20 max-w-5xl mx-auto px-6 text-left text-white mt-10 md:mt-0">
         <h1
-          className="font-['Playfair_Display'] italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight"
+          className="font-['Playfair_Display'] italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mt-10"
           style={{
             color: "#F8F0E3",
             textShadow: "2px 4px 8px rgba(0,0,0,0.9)",
@@ -51,7 +51,7 @@ const HeroSction = () => {
         <div className="h-4 md:h-8"></div>
 
         <p
-          className="font-extrabold text-xl sm:text-2xl md:text-3xl max-w-2xl leading-relaxed"
+          className="font-extrabold text-xl sm:text-2xl md:text-3xl max-w-4xl leading-relaxed"
           style={{ textShadow: "2px 4px 8px rgba(0,0,0,0.9)" }}
         >
           We make your wedding best memorable for life time. <br className="hidden md:block" />

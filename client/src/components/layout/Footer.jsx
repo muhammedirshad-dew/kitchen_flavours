@@ -8,9 +8,9 @@ const Footer = () => {
       {/* Top Section */}
       <div className="flex flex-col items-center text-center space-y-6 max-w-7xl mx-auto">
         {/* Logo */}
-        <div>
-          <img src={logo} alt="Kitchen Flavours Logo" className="w-24 sm:w-30 cursor-pointer transition-transform hover:scale-105"/>
-        </div>
+        <a href="#">
+          <img src={logo} alt="Kitchen Flavours Logo" className="w-50 sm:w-50 cursor-pointer transition-transform hover:scale-105"/>
+        </a>
 
         <p className="max-w-md text-xs sm:text-sm leading-relaxed px-4">
           We create memorable events with creativity, professionalism, and

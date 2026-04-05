@@ -126,7 +126,7 @@ const GallerySection = () => {
               />
             </div>
 
-            <div className="relative overflow-hidden rounded-xl bg-brown-400 h-[30vh] sm:h-[40vh] md:h-auto">
+            <div className="relative overflow-hidden rounded-xl bg-brown-400 h-[60vh] sm:h-[70vh] md:h-auto">
               <video
                 src={reel3}
                 autoPlay
@@ -153,7 +153,7 @@ const GallerySection = () => {
               />
             </div>
 
-            <div className="relative overflow-hidden rounded-xl bg-orange-200 h-[30vh] sm:h-[40vh] md:h-auto">
+            <div className="relative overflow-hidden rounded-xl bg-orange-200 h-[60vh] sm:h-[70vh] md:h-auto">
               <video
                 src={reel4}
                 autoPlay

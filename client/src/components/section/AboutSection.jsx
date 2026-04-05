@@ -2,7 +2,7 @@ import React from 'react'
 import aboutImg from"../../assets/About/about-1.jpeg";
 import aboutImg2 from"../../assets/About/about-2.jpg";
 import aboutImg3 from "../../assets/About/our-team.jpg";
-import aboutImg4 from"../../assets/About/about-4.jpg";
+
 const AboutSection = () => {
   return (
     <section id="about" className="w-full py-16 px-6  bg-gray-100">
