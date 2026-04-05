@@ -49,8 +49,8 @@ const GallerySection = () => {
   }, [images1.length, images2.length]);
 
   return (
-    <div className=" bg-gray-100">
-      <div className="max-w-6xl mx-auto">
+    <div className="bg-gray-100">
+      <div className="max-w-6xl mx-auto py-10">
         {/* Heading */}
         <div className="text-center mb-14">
           <h1

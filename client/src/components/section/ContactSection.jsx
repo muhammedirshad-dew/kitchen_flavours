@@ -192,7 +192,7 @@ const ContactSection = () => {
                 name="user_name"
                 placeholder="Full Name"
                 required
-                className="w-full border-b border-gray-400 outline-none py-2 focus:border-[#B38F6F] transition-colors text-sm sm:text-base bg-transparent"
+                className="w-full border-b border-gray-400 outline-none py-2 focus:border-cyan-500 transition-colors text-sm sm:text-base bg-transparent"
                 value={formData.user_name}
                 onChange={handleChange}
               />
@@ -202,7 +202,7 @@ const ContactSection = () => {
                 name="user_email"
                 placeholder="Your Email"
                 required
-                className="w-full border-b border-gray-400 outline-none py-2 focus:border-[#B38F6F] transition-colors text-sm sm:text-base bg-transparent"
+                className="w-full border-b border-gray-400 outline-none py-2 focus:border-cyan-500 transition-colors text-sm sm:text-base bg-transparent"
                 value={formData.user_email}
                 onChange={handleChange}
               />
@@ -212,7 +212,7 @@ const ContactSection = () => {
                 name="user_phone"
                 placeholder="Phone Number"
                 required
-                className="w-full border-b border-gray-400 outline-none py-2 focus:border-[#B38F6F] transition-colors text-sm sm:text-base bg-transparent"
+                className="w-full border-b border-gray-400 outline-none py-2 focus:border-cyan-500 transition-colors text-sm sm:text-base bg-transparent"
                 value={formData.user_phone}
                 onChange={handleChange}
               />
@@ -221,7 +221,7 @@ const ContactSection = () => {
                 name="message"
                 placeholder="Type your Message..."
                 required
-                className="w-full border-b border-gray-400 outline-none py-2 resize-none focus:border-[#B38F6F] transition-colors text-sm sm:text-base bg-transparent"
+                className="w-full border-b border-gray-400 outline-none py-2 resize-none focus:border-cyan-500 transition-colors text-sm sm:text-base bg-transparent"
                 rows="3"
                 value={formData.message}
                 onChange={handleChange}
@@ -233,7 +233,7 @@ const ContactSection = () => {
                 className={`w-full py-3 sm:py-4 rounded-md transition font-bold flex items-center justify-center space-x-2 shadow-lg text-sm sm:text-base ${
                   !isFormValid || loading
                     ? "bg-gray-300 cursor-not-allowed text-gray-500"
-                    : "bg-[#B38F6F] hover:bg-[#96765a] text-white active:scale-95"
+                    : "bg-[#B38F6F] hover:bg-[#79604b] text-white active:scale-95"
                 }`}
               >
                 {loading ? (
