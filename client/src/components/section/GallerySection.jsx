@@ -18,20 +18,16 @@ import reel2 from "../../assets/Gallery/reel-box1-2.mp4";
 import reel3 from "../../assets/Gallery/reel-box1-3.mp4";
 import reel4 from "../../assets/Gallery/reel-box1-4.mp4";
 
-
-
 const GallerySection = () => {
   const images1 = [carousel1_1, carousel1_2, carousel1_3];
   const images2 = [carousel2_1, carousel2_2, carousel2_3];
   const images3 = [carousel3_1, carousel3_2, carousel3_3];
   const images4 = [carousel4_1, carousel4_2, carousel4_3];
 
-  
   const [currentIndex1, setCurrentIndex1] = useState(0);
   const [currentIndex2, setCurrentIndex2] = useState(0);
   const [currentIndex3, setCurrentIndex3] = useState(0);
   const [currentIndex4, setCurrentIndex4] = useState(0);
-
 
   useEffect(() => {
     const timer1 = setInterval(() => {
@@ -77,7 +73,7 @@ const GallerySection = () => {
       </div>
       <section id="gallery">
         <div
-          className="w-full py-10 px-6 bg-cover bg-center h-[40vh] md:h-screen"
+          className="w-full px-6 bg-cover bg-center h-screen"
           style={{ backgroundImage: `url(${BgImg})` }}
         ></div>
         <div className="p-4 sm:p-6 bg-gray-100 min-h-screen">
