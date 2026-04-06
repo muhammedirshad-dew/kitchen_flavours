@@ -1,7 +1,7 @@
 import React from 'react';
 import weddingsImg from "../../assets/Services/Weddings.png";
 import engagementImg from "../../assets/Services/Engagement.png";
-import birthdaysImg from "../../assets/Services/Birthdays.jpg";
+import birthdaysImg from "../../assets/Services/Birthdays.jpeg";
 import anniversaryImg from "../../assets/Services/Anniversary.jpg";
 import housewarmingsImg from "../../assets/Services/Housewarmings.jpg";
 import corporateImg from "../../assets/Services/Corporate Events.jpg";

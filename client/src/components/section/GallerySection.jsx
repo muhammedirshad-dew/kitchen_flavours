@@ -10,7 +10,7 @@ import carousel3_1 from "../../assets/Gallery/carousel-box3-img1.jpg";
 import carousel3_2 from "../../assets/Gallery/carousel-box3-img2.jpg";
 import carousel3_3 from "../../assets/Gallery/carousel-box3-img3.jpg";
 import carousel4_1 from "../../assets/Gallery/carousel-box4-img1.jpg";
-import carousel4_2 from "../../assets/Gallery/carousel-box4-img2.jpg";
+import carousel4_2 from "../../assets/Gallery/carousel-box4-img2.jpeg";
 import carousel4_3 from "../../assets/Gallery/carousel-box4-img3.jpg";
 
 import reel1 from "../../assets/Gallery/reel-box1-1.mp4";
